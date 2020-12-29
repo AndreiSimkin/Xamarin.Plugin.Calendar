@@ -24,7 +24,9 @@
         Month="{Binding Month}"
         SelectedDate="{Binding SelectedDate}"
         VerticalOptions="FillAndExpand"
-        Year="{Binding Year}">
+        Year="{Binding Year}"
+        Culture="{Binding Culture}"
+        >
 
         <plugin:Calendar.EventTemplate>
             <DataTemplate>

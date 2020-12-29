@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 using SampleApp.Model;
+using System.Globalization;
 
 namespace SampleApp.ViewModels
 {
@@ -16,6 +17,8 @@ namespace SampleApp.ViewModels
         public ICommand TodayCommand => new Command(() => { Year = DateTime.Today.Year; Month = DateTime.Today.Month; SelectedDate = DateTime.Today;});
         public ICommand EventSelectedCommand => new Command(async (item) => await ExecuteEventSelectedCommand(item));
         
+        public CultureInfo Culture { get { return CultureInfo.GetCultureInfo("ru"); } }
+
         public SimplePageViewModel() : base()
         {
             // testing all kinds of adding events
